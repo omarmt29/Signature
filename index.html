@@ -21,36 +21,36 @@
 
 
     <div class="containere">
-        <div id="dashboard" style="min-width: 400px; width: 400px;">
+        <div id="dashboard" style="min-width: 428px;">
             <h1 style="color: white;
             text-align: center;
             padding-top: 34px;
-            padding-bottom: 22px;">Generador de firmas</h1>
-            <input type="text" name="" id="name" placeholder="Nombre">
-            <input type="text" name="" id="position" placeholder="Posicion">
-            <input type="text" name="" id="tel" placeholder="Numero telefonico">
-            <input type="text" name="" id="email" placeholder="Correo electronico">
-            <select name="select" id="select">
-                <option selected value="
-                Torre Novo Centro, Av. Lope de Vega, 3er nivel,
-                Santo Domingo 10125. Rep. Dom.">Santo Domingo</option>
+            padding-bottom: 22px;">Generador de firmas</h1>   
+            <input type="text" onchange="$('.name').text($('#name').val())" name="" id="name" placeholder="Nombre">
+            <input type="text" onchange="$('.position').text($('#position').val())" name="" id="position" placeholder="Posición" >
+            <input type="text" onchange="$('.cell').text($('#cell').val())" name="" id="cell" placeholder="Celular" >
+            <input type="text" onchange=" $('.tel').text($('#tel').val())" name="" id="tel" placeholder="Teléfono" >
+            <input type="text" onchange="$('.email').text($('#email').val())" name="" id="email" placeholder="Correo electrónico">
+            <select name="select" onchange=" $('.office').text($('#select').val())" id="select">
+                <option selected value="Oficinas">Oficinas</option>
+                <option  value="Torre Novo Centro, Av. Lope de Vega, 3er nivel,Santo Domingo 10125. Rep. Dom.">Santo Domingo</option>
                 <option value="Av. Alemania esq. El Dorado. Plaza Coral Village,
                 Bávaro, La Altagracia, 23301. Rep. Dom." >Punta Cana</option>
                 <option value="Caamaño Deño, Nivel 1, Local AS, Las Terrenas, Rep. Dom">Las Terrenas</option>
                 <option value="Av. 27 de Febrero, Plaza Vera, Nivel 2, Local B1, Santo Domingo, Rep. Dom">Santiago</option>
             </select>
-            <select name="select" id="logos">
-               <option selected value="Seleccionar logo">Seleccionar Logo</option>
-                <option   value="https://novalproperties.com/images/email-signature/logo.jpg">Logo Noval</option>
-                <option  value="https://novalproperties.com/images/email-signature/noval-properties.jpg">Logo Noval Properties</option>
+            <select name="select" onchange="imagehandler()" id="logos">
+               <option selected value="Seleccionar logo">Logos</option>
+                <option   value="https://novalproperties.com/images/email-signature/logo.jpg">Noval</option>
+                <option  value="https://novalproperties.com/images/email-signature/noval-properties.jpg">Noval Properties</option>
             </select>
            <div class="button-container">
-                <button onclick="AplicarCambios()">Aplicar cambios</button>
-                <button onclick="copySelection()" id="copy-btn" class="">Copiar</button>
+                <!-- <button onclick="AplicarCambios()" style="width: 100%;">Aplicar cambios</button> -->
+   
            </div>
         </div>
 
-        <div id="signature">
+        <div id="signature" style="display: flex; flex-direction: column;">
             <span id="copy-area">
 
                 <table width="840" style="max-width: 840px;">
@@ -62,7 +62,7 @@
 
                                 <table style="width: 480px;">
                                     <tr>
-                                        <td>
+                                        <td style="width: 191px;">
 
                                             <table align="top" width="190" style="max-width: 190px;" border="0"
                                                 cellpadding="0" cellspacing="0">
@@ -70,8 +70,8 @@
 
 
                                                     <tr>
-                                                        <td><img id="logo" src="noval-properties.jpg"
-                                                                width="190" height="auto"></td>
+                                                        <td align="center"><img id="logo" src="noval-properties.jpg"
+                                                                width="160" height="auto"></td>
                                                     </tr>
                                                     <tr>
                                                         <td id="logo-space-bottom"
@@ -88,8 +88,11 @@
                                                 style="margin-bottom: 2px; padding-top: 9px; padding-top: 13px; max-width: 180px;"
                                                 cellpadding="0" cellspacing="0">
                                                 <tbody>
-                                                    <tr>
-
+                                                    <tr >
+                                                        <td>
+                                                            <img width="5" height="30"
+                                                                src="https://novalproperties.com/images/emails/pixel.png">
+                                                        </td>
                                                         <td><a href="https://www.novalproperties.com/"
                                                                 rel="noopener noreferrer" target="_blank"><img
                                                                     src="https://novalproperties.com/images/emails/icons/world-icon.png"
@@ -151,9 +154,9 @@
                                             <table border="0" width="10" style="max-width: 10px;" cellpadding="0"
                                                 cellspacing="0">
                                                 <tbody>
-                                                    <tr>
-                                                        <td><img src="https://novalproperties.com/images/emails/pixel.png"
-                                                                width="10" height="140"></td>
+                                                    <tr >
+                                                        <td style="width: 2px;"><img src="https://novalproperties.com/images/emails/pixel.png"
+                                                                width="2" height="140"></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -172,8 +175,7 @@
                                                                         <td
                                                                             style="font-size:18px; font-family: Helvetica, Arial, sans-serif; color: #4c4c4c; line-height: 15px;">
                                                                             <strong class="name"
-                                                                                style="text-transform: uppercase;">DIONISIO
-                                                                                CHAVEZ</strong>
+                                                                                style="text-transform: uppercase;">DIONISIO CHAVEZ</strong>
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
@@ -200,8 +202,36 @@
                                                             <table width="210" style="max-width: 210px;" border="0"
                                                                 cellpadding="0" cellspacing="0">
                                                                 <tbody>
-
-                                                                    <tr>
+                                                                    <tr id="cell-tr" class="ocultar">
+                                                                        <td style="width: 10px; height: 10px;">
+                                                                            <a href=""
+                                                                                 class="cell-enlace"
+                                                                                rel="noopener noreferrer"
+                                                                                target="_blank">
+                                                                                <img src="https://novalproperties-laravel/public/images/email-signature/telefono.png"
+                                                                                    style="width: 20px" width="20"
+                                                                                    height="20">
+                                                                            </a>
+                                                                        </td>
+                                                                        <td style="width: 10px; height: 10px;">
+                                                                            <img width="10" height="10"
+                                                                                src="https://novalproperties.com/images/emails/pixel.png">
+                                                                        </td>
+                                                                        <td>
+                                                                            <a class="cell-enlace" href=""
+                                                                                style="text-decoration:none!important; font-family: Helvetica, Arial, sans-serif; ; color: #282828; font-size: 16px; font-weight: 500;">
+                                                                                <span class="cell"
+                                                                                    style="text-decoration:none;"> +809 966 4639</span>
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr style="font-size:0; margin:0;">
+                                                                        <td>
+                                                                            <img width="10" height="5"
+                                                                                src="https://novalproperties.com/images/emails/pixel.png">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr id="tel-tr" class="">
                                                                         <td>
                                                                             <a href=""
                                                                                  class="tel-enlace"
@@ -325,9 +355,10 @@
                 </tbody>
                 </table>
             </span>
+          
 
-
-
+            <button onclick="copySelection()" id="copy-btn" style="margin-top: 75px; width: 200px!important;     background: #151964;
+            color: white;">Copiar</button>
         </div>
 
 
@@ -337,6 +368,7 @@
 
 
     <style>
+     
         .copiado{
             background-color: #202020!important;
             color: white!important;
@@ -352,7 +384,7 @@
             font-size: 17px;
         }
         ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-            color: #151964;
+            color: #ffffff;
             opacity: 1; /* Firefox */
             }
 
@@ -385,11 +417,12 @@
             padding: 6px;
             font-size: 17px;
             border: none;
-            background-color: #8d91db;
+            background-color: #151964;
             padding: 12px;
-            border-radius: 3px;
+            border-bottom: 1px solid white;
             outline: none;
             font-size: 20px;
+            color: white;
         }
 
         select *{
@@ -400,7 +433,7 @@
         }
 
         #dashboard input:focus{
-            background-color: #2e2e2e;
+            background-color: #ffffff3b;
             color: white;
        
         }
@@ -414,7 +447,7 @@
             padding: 6px;
             font-size: 17px;
             border: none;
-            background-color: #8d91db;
+            background-color: white;
             padding: 12px;
             border-radius: 3px;
             outline: none;
@@ -431,9 +464,12 @@
             background-size: 30px;
             
         }
-   
+        
+        .ocultar{
+            display: none;
+        }
 
-        #dashboard button {
+        button {
             padding: 10px;
             font-size: 30px;
             background: white;
@@ -444,7 +480,7 @@
             width: 50%;
         }
 
-        #dashboard button:hover {
+        button:hover {
             cursor: pointer;
         }
 
@@ -460,26 +496,44 @@
     <script>
 
 
+        $( "#cell" ).change(function() {
+            $cellLength = $('#cell').val().length;
 
-        function AplicarCambios() {
-            $('.name').text($('#name').val())
-            $('.position').text($('#position').val())
-            $('.email').text($('#email').val())
-            $('.tel').text($('#tel').val())
-            $('.office').text($('#select').val())
-          
-            $(".tel-enlace").attr("href", $('#tel').val() )
-            $(".email").attr("href", $('#email').val() )
+            if($cellLength > 0){
+                $('#cell-tr').removeClass('ocultar')
+              
+            }else{
+                
+                $('#cell-tr').addClass('ocultar')
+            }
+
+            $(".cell-enlace").attr("href", 'Tel:'+$('#cell').val() )
+        });
+        $( "#tel" ).change(function() {
+
+            $tellLength = $('#tel').val().length;
+
+     
+
+            if( $tellLength > 0){
+                $('#tel-tr').removeClass('ocultar')
+            }else{
+                $('#tel-tr').addClass('ocultar')
+            }
+
+            $(".cell-enlace").attr("href", 'Tel:'+$('#cell').val() )
+        });
+        
+        $( "#email" ).change(function() {
+            $(".email").attr("href", 'mailto:'+$('#email').val() )
+        });
+
+        function imagehandler() {
             $("#logo").attr("src", $('#logos').val() )
 
             if( $('#logos').val() === "https://novalproperties.com/images/email-signature/noval-properties.jpg"){
                 $('#logo-space-bottom').css({"padding-bottom": "5px!important"});
             };
-
-            $('#copy-btn').removeClass("copiado")
-            $('#copy-btn').text("Copiar")
-
-
         }
 
         function copySelection() {
