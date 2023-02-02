@@ -37,14 +37,13 @@
             <input type="text" onchange=" $('.tel').text($('#tel').val())" name="" id="tel" placeholder="Teléfono">
             <input type="text" onchange="$('.email').text($('#email').val())" name="" id="email"
                 placeholder="Correo electrónico">
-            <select name="select" onchange=" $('.office').text($('#select').val())" id="select">
+            <select name="select" onchange="handlerOffice()" id="select">
                 <option selected value="Oficinas">Oficinas</option>
-                <option value="Torre Novo Centro, Av. Lope de Vega, 3er nivel, Santo Domingo 10125, Rep. Dom">Santo
+                <option value="santodomingo">Santo
                     Domingo</option>
-                <option value="Av. Alemania esq. El Dorado, Plaza Coral Village,
-                Bávaro, La Altagracia, 23301, Rep. Dom">Punta Cana</option>
-                <option value='Alberto Caamaño Deño, Nivel 1, Local AS, Las Terrenas, Rep. Dom'>Las Terrenas</option>
-                <option value="Av. 27 de Febrero, Plaza Vera, Nivel 2, Local B1, Santo Domingo, Rep. Dom">Santiago
+                <option value="puntacana">Punta Cana</option>
+                <option value='lasterrenas'>Las Terrenas</option>
+                <option value="santiago">Santiago
                 </option>
             </select>
             <select name="select" onchange="imagehandler()" id="logos">
@@ -533,6 +532,39 @@
     </style>
 
     <script>
+
+        function handlerOffice() {
+
+            let option = $('#select').val()
+
+       
+
+            switch (option) {
+
+                case "santodomingo": 
+                    $('.office').text('Torre Novo Centro, Av. Lope de Vega, 3er nivel, Santo Domingo 10125, Rep. Dom')
+                    break;
+
+                case "lasterrenas": 
+                    
+                    $('.office').html('<span>Alberto Caamaño Deño, Nivel 1, Local AS,</span></br> <span> Las Terrenas, Rep. Dom</span>')
+                    break;
+
+                case "puntacana": 
+                    $('.office').text('Av. Alemania esq. El Dorado, Plaza Coral Village, Bávaro, La Altagracia, 23301, Rep. Dom')
+                    break;
+
+                case "santiago": 
+                     $('.office').text('Av. 27 de Febrero, Plaza Vera, Nivel 2, Local B1, Santiago, Rep. Dom')
+                    break;
+
+                default:
+            }
+
+
+
+
+        }
 
 
         $("#cell").change(function () {
