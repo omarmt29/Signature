@@ -9,12 +9,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
         integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  
+
 
     <title>Document</title>
 </head>
 
 <body>
+
+    <div class="disponible">
+        <h2>No disponible</h2>
+    </div>
 
 
 
@@ -25,29 +29,34 @@
             <h1 style="color: white;
             text-align: center;
             padding-top: 34px;
-            padding-bottom: 22px;">Generador de firmas</h1>   
+            padding-bottom: 22px;">Generador de firmas</h1>
             <input type="text" onchange="$('.name').text($('#name').val())" name="" id="name" placeholder="Nombre">
-            <input type="text" onchange="$('.position').text($('#position').val())" name="" id="position" placeholder="Posición" >
-            <input type="text" onchange="$('.cell').text($('#cell').val())" name="" id="cell" placeholder="Celular" >
-            <input type="text" onchange=" $('.tel').text($('#tel').val())" name="" id="tel" placeholder="Teléfono" >
-            <input type="text" onchange="$('.email').text($('#email').val())" name="" id="email" placeholder="Correo electrónico">
+            <input type="text" onchange="$('.position').text($('#position').val())" name="" id="position"
+                placeholder="Posición">
+            <input type="text" onchange="$('.cell').text($('#cell').val())" name="" id="cell" placeholder="Celular">
+            <input type="text" onchange=" $('.tel').text($('#tel').val())" name="" id="tel" placeholder="Teléfono">
+            <input type="text" onchange="$('.email').text($('#email').val())" name="" id="email"
+                placeholder="Correo electrónico">
             <select name="select" onchange=" $('.office').text($('#select').val())" id="select">
                 <option selected value="Oficinas">Oficinas</option>
-                <option  value="Torre Novo Centro, Av. Lope de Vega, 3er nivel,Santo Domingo 10125. Rep. Dom.">Santo Domingo</option>
+                <option value="Torre Novo Centro, Av. Lope de Vega, 3er nivel, Santo Domingo 10125. Rep. Dom.">Santo
+                    Domingo</option>
                 <option value="Av. Alemania esq. El Dorado. Plaza Coral Village,
-                Bávaro, La Altagracia, 23301. Rep. Dom." >Punta Cana</option>
-                <option value="Caamaño Deño, Nivel 1, Local AS, Las Terrenas, Rep. Dom">Las Terrenas</option>
-                <option value="Av. 27 de Febrero, Plaza Vera, Nivel 2, Local B1, Santo Domingo, Rep. Dom">Santiago</option>
+                Bávaro, La Altagracia, 23301. Rep. Dom.">Punta Cana</option>
+                <option value='Alberto Caamaño Deño, Nivel 1, Local AS, Las Terrenas, Rep. Dom'>Las Terrenas</option>
+                <option value="Av. 27 de Febrero, Plaza Vera, Nivel 2, Local B1, Santo Domingo, Rep. Dom">Santiago
+                </option>
             </select>
             <select name="select" onchange="imagehandler()" id="logos">
-               <option selected value="Seleccionar logo">Logos</option>
-                <option   value="https://novalproperties.com/images/email-signature/logo.jpg">Noval</option>
-                <option  value="https://novalproperties.com/images/email-signature/noval-properties.jpg">Noval Properties</option>
+                <option selected value="Seleccionar logo">Logos</option>
+                <option value="https://novalproperties.com/images/email-signature/logo.jpg">Noval</option>
+                <option value="https://novalproperties.com/images/email-signature/noval-properties.jpg">Noval Properties
+                </option>
             </select>
-           <div class="button-container">
+            <div class="button-container">
                 <!-- <button onclick="AplicarCambios()" style="width: 100%;">Aplicar cambios</button> -->
-   
-           </div>
+
+            </div>
         </div>
 
         <div id="signature" style="display: flex; flex-direction: column;">
@@ -88,7 +97,7 @@
                                                 style="margin-bottom: 2px; padding-top: 9px; padding-top: 13px; max-width: 180px;"
                                                 cellpadding="0" cellspacing="0">
                                                 <tbody>
-                                                    <tr >
+                                                    <tr>
                                                         <td>
                                                             <img width="5" height="30"
                                                                 src="https://novalproperties.com/images/emails/pixel.png">
@@ -154,8 +163,9 @@
                                             <table border="0" width="10" style="max-width: 10px;" cellpadding="0"
                                                 cellspacing="0">
                                                 <tbody>
-                                                    <tr >
-                                                        <td style="width: 2px;"><img src="https://novalproperties.com/images/emails/pixel.png"
+                                                    <tr>
+                                                        <td style="width: 2px;"><img
+                                                                src="https://novalproperties.com/images/emails/pixel.png"
                                                                 width="2" height="140"></td>
                                                     </tr>
                                                 </tbody>
@@ -175,7 +185,8 @@
                                                                         <td
                                                                             style="font-size:18px; font-family: Helvetica, Arial, sans-serif; color: #4c4c4c; line-height: 15px;">
                                                                             <strong class="name"
-                                                                                style="text-transform: uppercase;">DIONISIO CHAVEZ</strong>
+                                                                                style="text-transform: uppercase;">DIONISIO
+                                                                                CHAVEZ</strong>
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
@@ -204,11 +215,10 @@
                                                                 <tbody>
                                                                     <tr id="cell-tr" class="ocultar">
                                                                         <td style="width: 10px; height: 10px;">
-                                                                            <a href=""
-                                                                                 class="cell-enlace"
+                                                                            <a href="" class="cell-enlace"
                                                                                 rel="noopener noreferrer"
                                                                                 target="_blank">
-                                                                                <img src="https://novalproperties-laravel/public/images/email-signature/telefono.png"
+                                                                                <img src="https://novalproperties.com/images/email-signature/telefono.png"
                                                                                     style="width: 20px" width="20"
                                                                                     height="20">
                                                                             </a>
@@ -221,7 +231,8 @@
                                                                             <a class="cell-enlace" href=""
                                                                                 style="text-decoration:none!important; font-family: Helvetica, Arial, sans-serif; ; color: #282828; font-size: 16px; font-weight: 500;">
                                                                                 <span class="cell"
-                                                                                    style="text-decoration:none;"> +809 966 4639</span>
+                                                                                    style="text-decoration:none;"> +809
+                                                                                    966 4639</span>
                                                                             </a>
                                                                         </td>
                                                                     </tr>
@@ -233,8 +244,7 @@
                                                                     </tr>
                                                                     <tr id="tel-tr" class="">
                                                                         <td>
-                                                                            <a href=""
-                                                                                 class="tel-enlace"
+                                                                            <a href="" class="tel-enlace"
                                                                                 rel="noopener noreferrer"
                                                                                 target="_blank">
                                                                                 <img src="https://novalproperties.com/images/email-signature/smartphone.png"
@@ -250,7 +260,8 @@
                                                                             <a class="tel-enlace" href=""
                                                                                 style="text-decoration:none!important; font-family: Helvetica, Arial, sans-serif; ; color: #282828; font-size: 16px; font-weight: 500;">
                                                                                 <span class="tel"
-                                                                                    style="text-decoration:none;"> +809 966 4639</span>
+                                                                                    style="text-decoration:none;"> +809
+                                                                                    966 4639</span>
                                                                             </a>
                                                                         </td>
                                                                     </tr>
@@ -264,8 +275,7 @@
 
                                                                     <tr style="font-size:0; margin:0;">
                                                                         <td style="vertical-align: bottom;">
-                                                                            <a href=" "
-                                                                                rel="noopener noreferrer"
+                                                                            <a href=" " rel="noopener noreferrer"
                                                                                 target="_blank"><img
                                                                                     src="https://novalproperties.com/images/email-signature/envelope.png"
                                                                                     style="width: 20px; margin-bottom: 3px; "
@@ -286,8 +296,9 @@
 
                                                                 </tbody>
                                                             </table>
-                                                            <table width="210" align="top" border="0" cellpadding="0"
-                                                                cellspacing="0" style="max-width: 210px;">
+                                                            <table width="285" align="top" border="0" cellpadding="0"
+                                                                cellspacing="0"
+                                                                style="max-width: 285px; width: 285px!important;">
                                                                 <tbody>
                                                                     <tr style="font-size:0; margin:0;">
                                                                         <td>
@@ -342,8 +353,8 @@
 
                         <tr>
                             <td align="left">
-                                <img style="border: 1px solid #ccc;" src="https://novalproperties.com/images/gif-banner.gif" width="838"
-                                    height="138">
+                                <img style="border: 1px solid #ccc;"
+                                    src="https://novalproperties.com/images/gif-banner.gif" width="838" height="138">
 
                             </td>
                         </tr>
@@ -355,7 +366,7 @@
                 </tbody>
                 </table>
             </span>
-          
+
 
             <button onclick="copySelection()" id="copy-btn" style="margin-top: 75px; width: 200px!important;     background: #151964;
             color: white;">Copiar</button>
@@ -368,41 +379,53 @@
 
 
     <style>
-     
-        .copiado{
-            background-color: #202020!important;
-            color: white!important;
+        .disponible {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
         }
+
+        .copiado {
+            background-color: #202020 !important;
+            color: white !important;
+        }
+
         * {
             padding: 0px;
             margin: 0px;
             font-family: Helvetica, sans-serif;
         }
 
-        select{
+        select {
             padding: 6px;
             font-size: 17px;
         }
-        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-            color: #ffffff;
-            opacity: 1; /* Firefox */
-            }
 
-        #signature{
+        ::placeholder {
+            /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #ffffff;
+            opacity: 1;
+            /* Firefox */
+        }
+
+        #signature {
 
             width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
-            
+
         }
-     
+
 
         .containere {
             display: flex;
             width: 100%;
             height: 100vh;
-           
+
         }
 
         #dashboard {
@@ -425,24 +448,24 @@
             color: white;
         }
 
-        select *{
+        select * {
             background-color: #2e2e2e;
             color: white;
             font-size: 20px;
             text-indent: 55px;
         }
 
-        #dashboard input:focus{
+        #dashboard input:focus {
             background-color: #ffffff3b;
             color: white;
-       
+
         }
 
-        select:hover{
+        select:hover {
             cursor: pointer;
         }
 
-        select{
+        select {
             font-size-adjust: 0.9;
             padding: 6px;
             font-size: 17px;
@@ -452,20 +475,22 @@
             border-radius: 3px;
             outline: none;
             font-size: 20px;
-          
-            -moz-appearance:none; /* Firefox */
-            -webkit-appearance:none; /* Safari and Chrome */
-            appearance:none;
+
+            -moz-appearance: none;
+            /* Firefox */
+            -webkit-appearance: none;
+            /* Safari and Chrome */
+            appearance: none;
 
             background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
             background-repeat: no-repeat;
             background-position-x: 95%;
             background-position-y: 50%;
             background-size: 30px;
-            
+
         }
-        
-        .ocultar{
+
+        .ocultar {
             display: none;
         }
 
@@ -484,55 +509,69 @@
             cursor: pointer;
         }
 
-        .button-container{
+        .button-container {
             display: flex;
             gap: 10px;
             flex-grow: 50%
         }
 
-     
+        @media screen and (max-width: 500px) {
+            .disponible {
+                display: block;
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .containere {
+                display: none !important;
+            }
+
+        }
     </style>
 
     <script>
 
 
-        $( "#cell" ).change(function() {
+        $("#cell").change(function () {
             $cellLength = $('#cell').val().length;
 
-            if($cellLength > 0){
+            if ($cellLength > 0) {
                 $('#cell-tr').removeClass('ocultar')
-              
-            }else{
-                
+
+            } else {
+
                 $('#cell-tr').addClass('ocultar')
             }
 
-            $(".cell-enlace").attr("href", 'Tel:'+$('#cell').val() )
+            $(".cell-enlace").attr("href", 'Tel:' + $('#cell').val())
         });
-        $( "#tel" ).change(function() {
+        $("#tel").change(function () {
 
             $tellLength = $('#tel').val().length;
 
-     
 
-            if( $tellLength > 0){
+
+            if ($tellLength > 0) {
                 $('#tel-tr').removeClass('ocultar')
-            }else{
+            } else {
                 $('#tel-tr').addClass('ocultar')
             }
 
-            $(".cell-enlace").attr("href", 'Tel:'+$('#cell').val() )
+            $(".cell-enlace").attr("href", 'Tel:' + $('#cell').val())
         });
-        
-        $( "#email" ).change(function() {
-            $(".email").attr("href", 'mailto:'+$('#email').val() )
+
+        $("#email").change(function () {
+            $(".email").attr("href", 'mailto:' + $('#email').val())
         });
 
         function imagehandler() {
-            $("#logo").attr("src", $('#logos').val() )
+            $("#logo").attr("src", $('#logos').val())
 
-            if( $('#logos').val() === "https://novalproperties.com/images/email-signature/noval-properties.jpg"){
-                $('#logo-space-bottom').css({"padding-bottom": "5px!important"});
+            if ($('#logos').val() === "https://novalproperties.com/images/email-signature/noval-properties.jpg") {
+                $('#logo-space-bottom').css({ "padding-bottom": "5px!important" });
             };
         }
 
