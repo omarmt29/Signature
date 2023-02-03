@@ -37,8 +37,9 @@
             <input type="text" onchange=" $('.tel').text($('#tel').val())" name="" id="tel" placeholder="Teléfono">
             <input type="text" onchange="$('.email').text($('#email').val())" name="" id="email"
                 placeholder="Correo electrónico">
+
             <select name="select" onchange="handlerOffice()" id="select">
-                <option selected value="Oficinas">Oficinas</option>
+                <option disabled selected selected>Oficinas</option>
                 <option value="santodomingo">Santo
                     Domingo</option>
                 <option value="puntacana">Punta Cana</option>
@@ -46,12 +47,14 @@
                 <option value="santiago">Santiago
                 </option>
             </select>
+
             <select name="select" onchange="imagehandler()" id="logos">
-                <option selected value="Seleccionar logo">Logos</option>
+                <option disabled selected> Logos</option>
                 <option value="https://novalproperties.com/images/email-signature/logo.jpg">Noval</option>
                 <option value="https://novalproperties.com/images/email-signature/noval-properties.jpg">Noval Properties
                 </option>
             </select>
+
             <div class="button-container">
                 <!-- <button onclick="AplicarCambios()" style="width: 100%;">Aplicar cambios</button> -->
 
@@ -367,7 +370,7 @@
             </span>
 
 
-            <button onclick="copySelection()" id="copy-btn" style="margin-top: 75px; width: 200px!important;     background: #151964;
+            <button onclick="copySelection()" id="copy-btn"
             color: white;">Copiar</button>
         </div>
 
@@ -386,10 +389,16 @@
             align-items: center;
             display: none;
         }
-
+        #copy-btn{
+            margin-top: 75px; 
+            width: 120px;    
+             background: #151964;
+             color: white;
+        }
         .copiado {
             background-color: #202020 !important;
             color: white !important;
+            width: 200px!important;
         }
 
         * {
@@ -405,7 +414,7 @@
 
         ::placeholder {
             /* Chrome, Firefox, Opera, Safari 10.1+ */
-            color: #ffffff;
+            color: #c1c1c1b5;
             opacity: 1;
             /* Firefox */
         }
@@ -430,20 +439,21 @@
         #dashboard {
             display: flex;
             flex-direction: column;
-            background-color: #151964;
+            background-color: #06071e;
             gap: 30px;
             padding: 20px;
         }
 
         #dashboard input {
-            padding: 6px;
+            padding: 7px;
             font-size: 17px;
             border: none;
-            background-color: #151964;
+            background-color: #090b3e   ;
             padding: 12px;
-            border-bottom: 1px solid white;
+            border-bottom: 1px solid rgb(17, 50, 158);
             outline: none;
             font-size: 20px;
+            border-radius: 13px;
             color: white;
         }
 
@@ -451,17 +461,26 @@
             background-color: #2e2e2e;
             color: white;
             font-size: 20px;
-            text-indent: 55px;
+            text-indent: 55px; 
+        }
+
+        select *:hover{
+            cursor: pointer;
         }
 
         #dashboard input:focus {
-            background-color: #ffffff3b;
+            background-color: #323462;
             color: white;
-
+            border-bottom: 1px solid rgb(209, 209, 209);
         }
 
         select:hover {
             cursor: pointer;
+        }
+
+        #logos:first {
+            color: #c1c1c1;
+            opacity: 1;
         }
 
         select {
@@ -469,24 +488,24 @@
             padding: 6px;
             font-size: 17px;
             border: none;
-            background-color: white;
+            background-color: #090b3e   ;
             padding: 12px;
-            border-radius: 3px;
+            border-radius: 13px;
             outline: none;
             font-size: 20px;
-
+            color: white;
             -moz-appearance: none;
             /* Firefox */
             -webkit-appearance: none;
             /* Safari and Chrome */
             appearance: none;
 
-            background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+            background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
             background-repeat: no-repeat;
             background-position-x: 95%;
             background-position-y: 50%;
             background-size: 30px;
-
+            border-bottom: solid 1px rgb(205, 205, 205);
         }
 
         .ocultar {
